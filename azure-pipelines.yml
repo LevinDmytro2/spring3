@@ -8,6 +8,8 @@ trigger:
 
 variables:
 
+  - group: dev_us-west-2
+
   # Azure Resource Manager connection created during pipeline creation
   azureSubscription: 'd41f7d5f-bad9-46d3-bb75-701a05c0a0d1'
 
@@ -30,6 +32,9 @@ stages:
       name: Default
 
     steps:
+    - script: |
+        echo $(FOO)
+      displayName: 'Show Variable Values'
     - task: Maven@3
       displayName: 'Maven Package'
       inputs:
