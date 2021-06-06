@@ -11,7 +11,7 @@ variables:
   group: dev_us-west-2
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'a93bec9e-5b32-4336-ac05-d6719eca4ea6'
+  azureSubscription: $(FOO)
 
   # Web app name
   webAppName: 'spring-boot-1622980131271'
