@@ -8,7 +8,10 @@ on:
   pull_request:
     branches: 
       - master
-
+inputs:
+  branches:
+    description: 'Branches to update'
+    required: false
 jobs:
     build:
         name: Call Azure Pipeline
